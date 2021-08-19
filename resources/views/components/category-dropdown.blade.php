@@ -7,7 +7,7 @@
   </x-slot>
 
   @php
-    $queryString = http_build_query(request()->except('category'));
+    $queryString = http_build_query(request()->except('category', 'page'));
   @endphp
 
   <x-dropdown-item href="/{{ $queryString ? '?'.$queryString : '' }}" :active="empty($currentCategory)">All</x-dropdown-item>
