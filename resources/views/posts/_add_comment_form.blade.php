@@ -15,16 +15,13 @@
                     rows="5"
                     placeholder="Add your important comment here!"
                     required
-                >
-                </textarea>
+                ></textarea>
             </div>
 
-            @error('body')
-                <span class="text-xs text-red-500">{{ $message }}</span>
-            @enderror
+            <x-form.error name="body"/>
 
             <div class="flex justify-end mt-6">
-                <x-submit-button>Post</x-submit-button>
+                <x-form.button>Post</x-form.button>
             </div>
         </form>
     </x-panel>
